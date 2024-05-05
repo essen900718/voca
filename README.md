@@ -1,3 +1,20 @@
+
+## 踩坑日記
+
+environment successfully built with `python=3.7.13`, `opencv-python=4.9.0.80`, `numpy=1.21.6`, `tensorflow-gpu=1.15.2`, `tensorboard=1.15.0`, `pyglet=1.5.27`, `numba=0.53.0`
+
+install [MPI-IS mesh](https://github.com/MPI-IS/mesh) first
+```
+BOOST_INCLUDE_DIRS=/path/to/boost/include make all
+```
+
+then install VOCA's python packages
+```
+pip install -r requirements.txt
+```
+
+---
+
 # [VOCA: Voice Operated Character Animation](https://voca.is.tue.mpg.de)
 
 This is an official [VOCA](https://voca.is.tue.mpg.de) repository.
