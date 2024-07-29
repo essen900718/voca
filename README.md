@@ -1,17 +1,19 @@
 
 ## 踩坑日記
 
+1. **ModuleNotFoundError: No module named 'psbody'**: check if [MPI-IS/mesh](https://github.com/MPI-IS/mesh) is installed successfully
+2. **no such option: --install-option make: ** [Makefile:7：all] Error 2**: replace --install-option with --config-settings in line 7 of Makefile for the newer versions of pip
+3. **Exception: pyglet 2.0.10 requires Python 3.8 or newer.**: downgrade pyglet to < 2.0.0, works well with pyglet=1.4.9
+
 environment successfully built with `python=3.7.13`, `opencv-python=4.9.0.80`, `numpy=1.21.6`, `tensorflow-gpu=1.15.2`, `tensorboard=1.15.0`, `pyglet=1.5.27`, `numba=0.53.0`
 
-install [MPI-IS mesh](https://github.com/MPI-IS/mesh) first
+install [MPI-IS mesh](https://github.com/MPI-IS/mesh) first, then install VOCA's python packages
 ```
 BOOST_INCLUDE_DIRS=/path/to/boost/include make all
-```
-
-then install VOCA's python packages
-```
 pip install -r requirements.txt
 ```
+
+**Note!!!**: remember to download `generic_model.pkl` and `FLAME_masks.pkl` and place them to `flame/generic_model.pkl` and `flame/FLAME_masks/FLAME_masks.pkl`
 
 ---
 
